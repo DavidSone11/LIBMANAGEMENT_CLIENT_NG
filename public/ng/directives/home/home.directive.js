@@ -8,7 +8,7 @@ app.directive('home', ['$compile', function($compile) {
                 // if(!$state.current|| ($state.current && $state.current.name != 'login' && !AuthenticationFactory.isLoggedIn())){
                 //     $state.go('login');
                 // }
-
+                // toastr.success('Hello world!', 'Toastr fun!');
             }
         };
     }]);

@@ -16,7 +16,9 @@ app.factory('AuthenticationFactory', function ($state, $cookies, $location, $htt
             var successOBJ = {};
             var deferred = $q.defer();
             delete $http.defaults.headers.common['X-Requested-With'];
-            var headers = {"Authorization": "Basic " + $base64.encode(username + ":" + password)};
+            var headers = {
+                "Authorization": "Basic " + $base64.encode(username + ":" + password)
+            };
             $http.post("http://localhost:4000/login", {
                 withCredentials: true,
                 headers: headers
@@ -28,7 +30,6 @@ app.factory('AuthenticationFactory', function ($state, $cookies, $location, $htt
             return deferred.promise;
         },
         doLogout: function () {
-
             if (this.isLogged) {
 
                 this.isLogged = false;
@@ -40,12 +41,10 @@ app.factory('AuthenticationFactory', function ($state, $cookies, $location, $htt
                 delete $window.sessionStorage.role;
 
                 $cookies = {};
+            return $http.get("http://localhost:4000/logout", {
 
-                $state.go("login");
-            }
-
+            });
         }
-
-
+      }
     };
 });

@@ -15,8 +15,15 @@ var angular_injector = angular.injector(['ng']);
 var https = angular_injector.get('$http');
 
 
-var app = angular.module('LIBAPP', ['ngCookies', 'ngMessages', 'oc.lazyLoad',
-    'ui.router','base64'
+var app = angular.module('LIBAPP', [
+    'ngCookies',
+    'ngMessages',
+    'oc.lazyLoad',
+    'ui.router',
+    'base64',
+    'angular-loading-bar',
+    // 'toastr',
+    'ngAnimate'
 ]);
 
 
