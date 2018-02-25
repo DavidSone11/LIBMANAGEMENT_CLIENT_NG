@@ -1,0 +1,27 @@
+.rTable {
+    display: table;
+    width: 100%;
+}
+.rTableRow {
+    display: table-row;
+}
+.rTableHead {
+    display: table-header-group;
+    background-color: yellowgreen;
+    color:#fff;
+
+}
+.rTableHead {
+    display: table-cell;
+    padding: 8px 0px 12px 9px;
+
+}
+.rTableCell {
+    display: table-cell;
+    padding: 3px 10px;
+    border-bottom: 1px solid yellowgreen;
+}
+
+.rTableBody {
+    display: table-row-group;
+}
