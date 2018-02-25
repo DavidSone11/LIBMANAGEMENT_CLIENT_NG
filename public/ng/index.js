@@ -16,7 +16,7 @@ var https = angular_injector.get('$http');
 
 
 var app = angular.module('LIBAPP', ['ngCookies', 'ngMessages', 'oc.lazyLoad',
-    'ui.router'
+    'ui.router','base64'
 ]);
 
 
@@ -28,10 +28,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
             events: true,
         });
 
-        $httpProvider.defaults.withCredentials = true;
+        $httpProvider.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
-       // $urlRouterProvider.otherwise('/login');
-        $urlRouterProvider.otherwise('/dashboard/home');
+
+        $urlRouterProvider.otherwise('/login');
+      //  $urlRouterProvider.otherwise('/dashboard/home');
         $stateProvider
         .state('login', {
             templateUrl: 'ng/directives/login/login.directive.html',
