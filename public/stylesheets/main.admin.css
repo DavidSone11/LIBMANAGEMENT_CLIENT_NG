@@ -7,7 +7,7 @@ body {
 }
 
 #main-page-wrapper {
-    width: 100%;
+    width: 99%;
 }
 
 #page-wrapper {
@@ -22,6 +22,7 @@ body {
         margin: 0 0 0 250px;
         padding: 0 30px;
         border-left: 1px solid #e7e7e7;
+        box-shadow: 2px 2px 4px 3px #000;
     }
 }
 
@@ -41,6 +42,10 @@ body {
     background: rgba(0,17,89,0.9);
     box-shadow: 3px 1px 8px #000;
     border-radius: 0;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
 }
 
 .navbar .navbar-nav-left {
