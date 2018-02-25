@@ -1,0 +1,35 @@
+{
+  "name": "LIBMANAGMENT",
+  "authors": [
+    "santosh"
+  ],
+  "description": "This is Demo project for LIBMANAGEMENT",
+  "main": "app.js",
+  "keywords": [
+    "CSS",
+    "HTML5",
+    "JS",
+    "BOOTSTRAP",
+    "ANGULARJS"
+  ],
+  "license": "MIt",
+  "homepage": "www.libmanagement.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "3",
+    "jquery": "^3.3.1",
+    "angular-ui-router": "^1.0.15",
+    "oclazyload": "^1.1.0",
+    "angular-loader": "^1.6.9",
+    "angular-cookies": "^1.6.9",
+    "angular-messages": "^1.6.9",
+    "components-font-awesome": "^5.0.6"
+  }
+}

@@ -1,0 +1,75 @@
+
+.main-login-wrapper {
+    margin: 0;
+    padding: 0;
+    background: url('../assets/images/windows_10_s_stock_4k-wide.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: "Arial",serif;
+    color:#fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.login-box {
+    width: 345px;
+    height: 400px;
+    background:transparent;
+    position: absolute;
+    box-sizing: border-box;
+    top:20%;
+    left: 32%;
+    /* transform: translate(112%, 14%); */
+    padding: 21px 11px 7px 13px;
+    box-shadow: 5px 4px 43px #000;
+}
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.login-box
+input[type="text"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    color:#fff;
+    font-size: 15px;
+
+}
+
+.login-box
+input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 50px;
+    background: #0400ff;
+
+}
+
+.login-box label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+  }
+.login-box
+input[type="checkbox"]{
+    border: none;
+    outline: none;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    overflow: hidden;
+    width: 30px;
+    height: 22px;
+    margin: 0px 5px;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+
+}
+
+
