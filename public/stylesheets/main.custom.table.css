@@ -9,10 +9,6 @@
     display: table-header-group;
     background-color: yellowgreen;
     color:#fff;
-
-}
-.rTableHead {
-    display: table-cell;
     padding: 8px 0px 12px 9px;
 
 }
@@ -20,8 +16,18 @@
     display: table-cell;
     padding: 3px 10px;
     border-bottom: 1px solid yellowgreen;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .rTableBody {
     display: table-row-group;
+}
+.rTable:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
 }
