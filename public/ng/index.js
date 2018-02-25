@@ -30,7 +30,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
 
         $httpProvider.defaults.withCredentials = true;
 
-        $urlRouterProvider.otherwise('/login');
+       // $urlRouterProvider.otherwise('/login');
+        $urlRouterProvider.otherwise('/dashboard/home');
         $stateProvider
         .state('login', {
             templateUrl: 'ng/directives/login/login.directive.html',
@@ -42,7 +43,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                         name: 'LIBAPP',
                         files: [
                             'ng/directives/login/login.directive.js',
-                            'ng/directives/login/login.controller.js'
+                            'ng/directives/login/login.controller.js',
+                            'ng/factory/Authentication.factory.js'
                         ]
                     });
                 }
@@ -60,7 +62,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 'ng/directives/dashboard/dashboard.directive.js',
                                 'ng/directives/dashboard/dashboard.controller.js',
                                 'ng/directives/sidebar/sidebar.directive.js',
-                                'ng/directives/header/header.directive.js'
+                                'ng/directives/header/header.directive.js',
+                                'ng/factory/Authentication.factory.js'
                             ]
                         });
                     }
@@ -75,7 +78,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                       name:'LIBAPP',
                       files:[
                         'ng/directives/home/home.directive.js',
-                        'ng/directives/home/home.controller.js'
+                        'ng/directives/home/home.controller.js',
+                        'ng/factory/Authentication.factory.js'
                       ]
                     });
                   }
