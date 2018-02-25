@@ -5,7 +5,7 @@ app.controller('loginCtrl', function ($scope, $window,$state) {
         console.log(username + "" + password);
         if(username!=''||password!=''){
             //$window.location.href ="/";
-            $state.go("dashboard", {'message': 'Welcome to Dashboard'});
+            $state.go("dashboard.home", {'message': 'Welcome to Dashboard'});
         }
     };
 

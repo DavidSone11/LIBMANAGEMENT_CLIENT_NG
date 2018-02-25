@@ -32,7 +32,22 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
 
         $urlRouterProvider.otherwise('/login');
         $stateProvider
-            .state('dashboard', {
+        .state('login', {
+            templateUrl: 'ng/directives/login/login.directive.html',
+            url: '/login',
+            controller:"loginCtrl",
+            resolve: {
+                loadMyDirectives: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'LIBAPP',
+                        files: [
+                            'ng/directives/login/login.directive.js',
+                            'ng/directives/login/login.controller.js'
+                        ]
+                    });
+                }
+            }
+        }).state('dashboard', {
                 templateUrl: 'ng/directives/dashboard/dashboard.directive.html',
                 url: '/dashboard',
                 params: {message: null},
@@ -50,24 +65,40 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                         });
                     }
                 }
-            })
-
-            .state('login', {
-                templateUrl: 'ng/directives/login/login.directive.html',
-                url: '/login',
-                controller:"loginCtrl",
+            }).state('dashboard.home',{
+                url:'/home',
+                controller: 'homeCtrl',
+                templateUrl:'ng/home/home.directive.html',
+                resolve: {
+                  loadMyFiles:function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                      name:'LIBAPP',
+                      files:[
+                        'ng/directives/home/home.directive.js',
+                        'ng/directives/home/home.controller.js'
+                      ]
+                    });
+                  }
+                }
+              })
+            .state('dashboard.role', {
+                templateUrl: 'ng/directives/role/role.directive.html',
+                url: '/role',
+                controller:"roleCtrl",
                 resolve: {
                     loadMyDirectives: function ($ocLazyLoad) {
                         return $ocLazyLoad.load({
                             name: 'LIBAPP',
                             files: [
-                                'ng/directives/login/login.directive.js',
-                                'ng/directives/login/login.controller.js'
+                                'ng/directives/role/role.directive.js',
+                                'ng/directives/role/role.controller.js'
                             ]
                         });
                     }
                 }
             });
+
+
 
     }
 ]);
