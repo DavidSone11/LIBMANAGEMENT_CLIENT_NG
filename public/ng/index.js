@@ -68,7 +68,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
             }).state('dashboard.home',{
                 url:'/home',
                 controller: 'homeCtrl',
-                templateUrl:'ng/home/home.directive.html',
+                templateUrl:'ng/directives/home/home.directive.html',
                 resolve: {
                   loadMyFiles:function($ocLazyLoad) {
                     return $ocLazyLoad.load({
