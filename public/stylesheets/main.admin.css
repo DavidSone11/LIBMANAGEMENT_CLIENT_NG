@@ -26,7 +26,11 @@ body {
     }
 }
 
-
+.img-circle {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
 /* .navbar-nav{
     display: block;
 }
