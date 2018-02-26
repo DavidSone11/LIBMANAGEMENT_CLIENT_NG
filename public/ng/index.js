@@ -16,15 +16,15 @@ var https = angular_injector.get('$http');
 
 
 var app = angular.module('LIBAPP', [
-    'ngCookies',
-    'ngMessages',
-    'oc.lazyLoad',
-    'ui.router',
-    'base64',
-    'angular-loading-bar',
+    "ngCookies",
+    "ngMessages",
+    "oc.lazyLoad",
+    "ui.router",
+    "base64",
+    "angular-loading-bar",
     // 'toastr',
-    'ngAnimate',
-    ngResource'
+    "ngAnimate",
+    "ngResource"
 ]);
 
 
@@ -53,7 +53,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                         files: [
                             'ng/directives/login/login.directive.js',
                             'ng/directives/login/login.controller.js',
-                            'ng/factory/Authentication.factory.js'
+                            'ng/factory/Authentication.factory.js',
+
                         ]
                     });
                 }
@@ -72,7 +73,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 'ng/directives/dashboard/dashboard.controller.js',
                                 'ng/directives/sidebar/sidebar.directive.js',
                                 'ng/directives/header/header.directive.js',
-                                'ng/factory/Authentication.factory.js'
+                                'ng/factory/Authentication.factory.js',
+                                'ng/servcies/user.service.js'
                             ]
                         });
                     }
@@ -105,6 +107,21 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                             files: [
                                 'ng/directives/role/role.directive.js',
                                 'ng/directives/role/role.controller.js'
+                            ]
+                        });
+                    }
+                }
+            }).state('dashboard.user', {
+                templateUrl: 'ng/directives/user/user.directive.html',
+                url: '/user',
+                controller:"userCtrl",
+                resolve: {
+                    loadMyDirectives: function ($ocLazyLoad) {
+                        return $ocLazyLoad.load({
+                            name: 'LIBAPP',
+                            files: [
+                                'ng/directives/user/user.directive.js',
+                                'ng/directives/user/user.controller.js'
                             ]
                         });
                     }
