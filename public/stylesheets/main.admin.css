@@ -6,7 +6,7 @@ body {
 
 #main-page-wrapper {
     width: 100%;
-    max-width: 99%;
+    max-width: 100%;
 }
 
 #page-wrapper {
@@ -43,7 +43,7 @@ body {
 
 .navbar {
     height: 100%;
-    width: 81%;
+    width: 100%;
     background: rgba(0, 17, 89, 0.9);
     box-shadow: 3px 1px 8px #000;
     border-radius: 0;
@@ -66,7 +66,7 @@ body {
 }
 
 .navbar .navbar-nav-left ul {
-    padding: 12px 0px 3px 600px;
+    padding: 2px 0px 0px 800px;
     list-style: none;
 }
 
@@ -77,17 +77,41 @@ body {
 .side-nav {
     width: 245px;
     height: 100%;
-    min-height: 780px;
+    min-height: 900px;
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
     background: transparent;
-    /* padding: 75px 0 0 40px; */
     box-shadow: 3px 1px 8px #000;
 }
 
+.side-nav .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 6px 65px 0px;
+}
+.side-nav .user-info p.name {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+.side-nav .user-info span.online {
+    border-radius: 3px;
+    background: #58d8a3;
+    margin: auto;
+    text-align: center;
+}
 
+.side-nav .user-info span.online:after {
+    content: "Online";
+    color: #fff;
+    display: block;
+    font-size: 10.5px;
+    padding: 2px 6px 0;
+}
 
 .side-nav ul li a {
     text-decoration: none;
@@ -104,10 +128,9 @@ body {
 .side-nav ul li {
     padding: 10px;
     position: relative;
-    width: 239px;
-
-    left: -38px;
-    top: 75px;
+    width: 237px;
+    left: -35px;
+    top: 0px;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -116,6 +139,8 @@ body {
 .side-nav ul li:hover {
     background: rgba(0, 0, 0, 0.5);
     color:#fff;
+    width: 237px;
+    left: -35px;
 }
 
 .custom-active{

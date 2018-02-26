@@ -34,7 +34,7 @@ app.directive('header', ['$compile', function ($compile) {
                     angular.element(document.querySelector('[id="main-navbar"]')).animate({
                         width: '100%',
                         opacity: '1',
-                        margin: "0 0"
+                        margin: "0px 64px"
                     }, "slow").fadeIn();
 
 
@@ -53,7 +53,7 @@ app.directive('header', ['$compile', function ($compile) {
                     }, "slow");
 
                     angular.element(document.querySelector('[id="main-navbar"]')).animate({
-                        width: '81%',
+                        width: '100%',
                         opacity: '1',
                         margin: "0px 249px"
                     }, "slow").fadeIn();
