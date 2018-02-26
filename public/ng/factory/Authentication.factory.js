@@ -1,7 +1,7 @@
 /*jshint sub:true*/
 ' use strict';
 var app = angular.module('LIBAPP');
-app.factory('AuthenticationFactory', function ($state, $cookies, $location,ApiService, $http, $q, $base64, $window) {
+app.factory('AuthenticationFactory', function ($state, $cookies, $location,loginUrl,GLOBALAPI, $http, $q, $base64, $window) {
     return {
         isLogged: false,
         isLoggedIn: function () {
@@ -19,7 +19,7 @@ app.factory('AuthenticationFactory', function ($state, $cookies, $location,ApiSe
             var deferred = $q.defer();
             delete $http.defaults.headers.common['X-Requested-With'];
             $http.defaults.headers.common['Authorization'] = 'Basic ' + $base64.encode(username + ":" + password);
-            $http.post(ApiService.loginUrl, {
+            $http.post(loginUrl, {
 
             }).then(function (response) {
                 deferred.resolve(response);
@@ -28,23 +28,23 @@ app.factory('AuthenticationFactory', function ($state, $cookies, $location,ApiSe
             });
             return deferred.promise;
         },
-        doLogout: function () {
-            if (this.isLogged) {
+        // doLogout: function () {
+        //     if (this.isLogged) {
 
-                this.isLogged = false;
-                delete this.user;
-                delete this.userRole;
-                //delete $window.sessionStorage.userPlan;
-                delete $window.sessionStorage.token;
-                delete $window.sessionStorage.username;
-                delete $window.sessionStorage.role;
+        //         this.isLogged = false;
+        //         delete this.user;
+        //         delete this.userRole;
+        //         //delete $window.sessionStorage.userPlan;
+        //         delete $window.sessionStorage.token;
+        //         delete $window.sessionStorage.username;
+        //         delete $window.sessionStorage.role;
 
-                $cookies = {};
-                return $http.get(ApiService.logOutUrl, {
+        //         $cookies = {};
+        //         return $http.get(ApiService.logOutUrl, {
 
-                });
-            }
-        },
+        //         });
+        //     }
+        // },
 
     };
 });

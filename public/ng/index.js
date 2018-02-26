@@ -27,6 +27,14 @@ var app = angular.module('LIBAPP', [
     "ngResource"
 ]);
 
+app.value('loginUrl', 'http://localhost:4000/login');
+app.value('logOutUrl', 'http://localhost:4000/logout');
+
+app.constant('GLOBALAPI', {
+    'loginUrl' : 'http://localhost:4000/login',
+    'logOutUrl': 'http://localhost:4000/logout',
+
+})
 
 app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$httpProvider',
     function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $httpProvider) {
@@ -54,7 +62,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                             'ng/directives/login/login.directive.js',
                             'ng/directives/login/login.controller.js',
                             'ng/factory/Authentication.factory.js',
-                            'ng/servcies/api.service.js'
+
 
                         ]
                     });
@@ -76,7 +84,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 'ng/directives/header/header.directive.js',
                                 'ng/factory/Authentication.factory.js',
                                 'ng/servcies/user.service.js',
-                                'ng/servcies/api.service.js'
+
                             ]
                         });
                     }
