@@ -7,7 +7,9 @@ body {
 }
 
 #main-page-wrapper {
-    width: 99%;
+    width: 100%;
+    max-width: 99%;
+    overflow: hidden;
 }
 
 #page-wrapper {

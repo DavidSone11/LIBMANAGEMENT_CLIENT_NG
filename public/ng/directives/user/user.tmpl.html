@@ -1,90 +1,106 @@
 <div class="container">
     <div class="row">
         <div class="page-header">
-            <h1>{{currentstate}}</h1>
+            <h4>{{currentstate}}</h4>
         </div>
 
-        <div class="table-responsive">
-            <table class="custom-table table-condensed">
-                <thead>
-                    <tr style="color:#fff; background-color: yellowgreen;">
-                        <th>SLNO</th>
-                        <th>Firstname</th>
-                        <th>UserName</th>
-                        <th>LastName</th>
-                        <th>Email</th>
-                        <th>Age</th>
-                        <th>Password</th>
-                        <th>role</th>
-                        <th>Plan</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <thead>
-                    <tr>
-                        <th>
-
-                        </th>
-
-                        <th>
-                            <input type="text" class="search" placeholder="Firstname" id="usr">
-                        </th>
-                        <th>
-                            <input type="text" class="search" placeholder="Username" id="usr">
-                        </th>
-                        <th>
-                            <input type="text" class="search" id="usr">
-                        </th>
-
-                        <th>
-                            <input type="text" class="search" id="usr">
-                        </th>
-
-                        <th>
-                            <input type="text" class="search" id="usr">
-                        </th>
-                        <th>
-                            <input type="text" class="search" id="usr">
-                        </th>
-                        <th>
-                            <input type="text" class="search" id="usr">
-                        </th>
-                        <th>
-                            <input type="text" class="search" id="usr">
-                        </th>
-                        <th>
-
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="user in userList">
-                        <td>{{$index+1}}</td>
-                        <td>{{user.firstName}}</td>
-                        <td>{{user.userName}}</td>
-                        <td>{{user.lastName}}</td>
-                        <td>{{user.email}}</td>
-                        <td>{{user.age}}</td>
-                        <td>{{user.password}}</td>
-                        <td>{{user.roleCode.name}}</td>
-                        <td>{{user.userPlanRef.planName}}</td>
-                        <td>
-                            <button type="button" class="btn btn-primary btn-xs" ng-click="updateUser(user)">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                            </button>
-
-                            <button type="button" class="btn btn-danger btn-xs" ng-click="removeUser(user)">
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                            </button>
-                        </td>
 
 
-                    </tr>
 
-                </tbody>
-            </table>
+                <div class="card">
+                        <div class="card-header">
+                                Special title treatment
+                                <div class="float-right">Float right on all viewport sizes</div>
+                        </div>
+                        <div class="card-block">
+                                <table class="custom-table table-condensed">
+                                <thead>
+                                    <tr style="color:#fff; background-color: yellowgreen;height: 50px;">
+                                        <th></th>
+                                        <th>SLNO</th>
+                                        <th>Firstname</th>
+                                        <th>UserName</th>
+                                        <th>LastName</th>
+                                        <th>Email</th>
+                                        <th>Age</th>
+                                        <th>Password</th>
+                                        <th>role</th>
+                                        <th>Plan</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <thead>
+                                    <tr>
+                                        <th>
 
-        </div>
+                                        </th>
+
+                                        <th>
+
+                                        </th>
+
+                                        <th>
+                                            <input type="text" class="search" placeholder="Firstname" id="usr">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="search" placeholder="Username" id="usr">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="search" id="usr">
+                                        </th>
+
+                                        <th>
+                                            <input type="text" class="search" id="usr">
+                                        </th>
+
+                                        <th>
+                                            <input type="text" class="search" id="usr">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="search" id="usr">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="search" id="usr">
+                                        </th>
+                                        <th>
+                                            <input type="text" class="search" id="usr">
+                                        </th>
+                                        <th>
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="user in userList">
+                                        <td> <input type="checkbox" ng-click="usersetting(user)" ng-checked="user.checked" ng-model="user.select"></td>
+                                        <td>{{$index+1}}</td>
+                                        <td>{{user.firstName}}</td>
+                                        <td>{{user.userName}}</td>
+                                        <td>{{user.lastName}}</td>
+                                        <td>{{user.email}}</td>
+                                        <td>{{user.age}}</td>
+                                        <td>{{user.password}}</td>
+                                        <td>{{user.roleCode.name}}</td>
+                                        <td>{{user.userPlanRef.planName}}</td>
+                                        <td>
+                                            <button type="button" ng-disabled="true" class="btn btn-primary btn-sm" ng-click="updateUser(user)">
+                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </button>
+
+                                            <button type="button" ng-disabled="true" class="btn btn-danger btn-sm" ng-click="removeUser(user)">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </button>
+                                        </td>
+
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                      </div>
 
 
 

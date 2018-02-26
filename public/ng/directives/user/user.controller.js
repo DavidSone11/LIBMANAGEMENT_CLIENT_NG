@@ -33,7 +33,7 @@ app.controller('userCtrl', function ($scope, $state, UserService, GLOBALAPI) {
 
         console.log(user);
 
-    }
+    };
 
 
 });
