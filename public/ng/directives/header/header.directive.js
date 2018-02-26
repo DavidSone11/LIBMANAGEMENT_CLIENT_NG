@@ -21,13 +21,14 @@ app.directive('header', ['$compile', function ($compile) {
                 if (toggle) {
 
                     angular.element(document.querySelector('[id="side-menu"]')).animate({
-                        left: '-300px',
-                        width: '0px',
+                        left: '0px',
+                        width: '60px',
                         opacity: '1',
                     }, "slow").fadeIn();
                     angular.element(document.querySelector('[id="page-wrapper"]')).animate({
-                        margin: '0px 0px 0px 0px',
+                        margin: '0 0 0 65px',
                         opacity: '1',
+                        padding: "0 10px 0 0"
                     }, "slow").fadeIn();
 
                     angular.element(document.querySelector('[id="main-navbar"]')).animate({
