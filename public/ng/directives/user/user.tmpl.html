@@ -1,4 +1,38 @@
 <div>
+
+    <style>
+        .phone-list-item.ng-enter,
+        .phone-list-item.ng-leave,
+        .phone-list-item.ng-move {
+            transition: 0.5s linear all;
+        }
+
+        .phone-list-item.ng-enter,
+        .phone-list-item.ng-move {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .phone-list-item.ng-enter.ng-enter-active,
+        .phone-list-item.ng-move.ng-move-active {
+            height: 120px;
+            opacity: 1;
+        }
+
+        .phone-list-item.ng-leave {
+            opacity: 1;
+            overflow: hidden;
+        }
+
+        .phone-list-item.ng-leave.ng-leave-active {
+            height: 0;
+            opacity: 0;
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+    </style>
+
     <div class="page-header">
         <h4>{{currentstate}}</h4>
     </div>
@@ -45,7 +79,7 @@
                             <input type="text" class="search" placeholder="Firstname" id="usr7">
                         </th>
                         <th>
-                            <input type="text" class="search" placeholder="Username" id="usr6">
+                            <input type="text" class="search" placeholder="Username" id="usr6" ng-model="search">
                         </th>
                         <th>
                             <input type="text" class="search" id="usr5">
@@ -62,7 +96,7 @@
                             <input type="text" class="search" id="usr2">
                         </th>
                         <th>
-                            <input type="text" class="search" id="usr1">
+                            <input type="text" class="search" id="usr1" ng-model="search">
                         </th>
                         <th>
                             <input type="text" class="search" id="usr0">
@@ -73,7 +107,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="user in userList">
+                    <tr ng-repeat="user in userList | filter:search" class="phone-list-item">
                         <td>
                             <input type="checkbox" ng-click="usersetting(user)" ng-checked="user.checked" ng-model="user.select">
                         </td>
