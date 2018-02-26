@@ -13,6 +13,7 @@ app.controller('loginCtrl', function ($scope, $window, $state, AuthenticationFac
                 $window.sessionStorage.token = res.data.token;
                 $window.sessionStorage.user = res.data.username;
                 $window.sessionStorage.userRole = res.data.role;
+                $window.sessionStorage.userplan = res.data.userPlan;
                 $state.go("dashboard.home", {
                     'message': 'Welcome to Dashboard'
                 });

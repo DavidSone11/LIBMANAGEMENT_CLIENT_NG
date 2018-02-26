@@ -6,7 +6,7 @@ app.service('UserService', function ($state, $cookies, $location, $http, $q, $wi
         var deferred = $q.defer();
         $http.defaults.headers.common['Authorization'] = 'Basic ' + this.getToken();
         $http.get("http://localhost:4000/api/v1/getUsersByAllParams", {
-          //  headers: {"Authorization": 'x-access-token': this.getToken()}
+
         }).then(function (response) {
             deferred.resolve(response);
         }, function (error) {
