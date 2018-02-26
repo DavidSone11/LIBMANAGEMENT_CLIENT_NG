@@ -1,5 +1,7 @@
+/*jshint sub:true*/
+' use strict';
 var app = angular.module('LIBAPP');
-app.factory('AuthenticationFactory', function ($state, $cookies, $location, $http, $q, $base64, $window) {
+app.factory('AuthenticationFactory', function ($state, $cookies, $location,ApiService, $http, $q, $base64, $window) {
     return {
         isLogged: false,
         isLoggedIn: function () {
@@ -16,12 +18,9 @@ app.factory('AuthenticationFactory', function ($state, $cookies, $location, $htt
             var successOBJ = {};
             var deferred = $q.defer();
             delete $http.defaults.headers.common['X-Requested-With'];
-            var headers = {
-                "Authorization": "Basic " + $base64.encode(username + ":" + password)
-            };
-            $http.post("http://localhost:4000/login", {
-                withCredentials: true,
-                headers: headers
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + $base64.encode(username + ":" + password);
+            $http.post(ApiService.loginUrl, {
+
             }).then(function (response) {
                 deferred.resolve(response);
             }, function (error) {
@@ -41,10 +40,11 @@ app.factory('AuthenticationFactory', function ($state, $cookies, $location, $htt
                 delete $window.sessionStorage.role;
 
                 $cookies = {};
-            return $http.get("http://localhost:4000/logout", {
+                return $http.get(ApiService.logOutUrl, {
 
-            });
-        }
-      }
+                });
+            }
+        },
+
     };
 });

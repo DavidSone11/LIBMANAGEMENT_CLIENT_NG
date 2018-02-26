@@ -4,13 +4,9 @@ app.service('UserService', function ($state, $cookies, $location, $http, $q, $wi
 
     this.getUsers = function () {
         var deferred = $q.defer();
-        var headers = {
-            "Authorization": {
-                'x-access-token': this.getToken()
-            }
-        };
+        $http.defaults.headers.common['Authorization'] = 'Basic ' + this.getToken();
         $http.get("http://localhost:4000/api/v1/getUsersByAllParams", {
-            headers: headers
+          //  headers: {"Authorization": 'x-access-token': this.getToken()}
         }).then(function (response) {
             deferred.resolve(response);
         }, function (error) {
@@ -22,6 +18,6 @@ app.service('UserService', function ($state, $cookies, $location, $http, $q, $wi
     };
 
     this.getToken = function () {
-        return $window.sesstionStorage['token'];
+        return $window.sessionStorage['token'];
     };
 });

@@ -54,6 +54,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                             'ng/directives/login/login.directive.js',
                             'ng/directives/login/login.controller.js',
                             'ng/factory/Authentication.factory.js',
+                            'ng/servcies/api.service.js'
 
                         ]
                     });
@@ -74,7 +75,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 'ng/directives/sidebar/sidebar.directive.js',
                                 'ng/directives/header/header.directive.js',
                                 'ng/factory/Authentication.factory.js',
-                                'ng/servcies/user.service.js'
+                                'ng/servcies/user.service.js',
+                                'ng/servcies/api.service.js'
                             ]
                         });
                     }
