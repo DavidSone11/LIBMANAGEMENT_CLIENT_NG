@@ -80,6 +80,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 'ng/servcies/user.service.js',
                                 'ng/utility/current.state.prototype.js',
                                 'ng/utility/capitalizeFirstLetter.prototype.js',
+                                'ng/components/userPlan.component.js',
 
                             ]
                         });
