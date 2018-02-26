@@ -37,7 +37,10 @@ app.directive('header', ['$compile', function ($compile) {
                         margin: "0px 64px"
                     }, "slow").fadeIn();
 
+                    angular.element(document.querySelector('[id="user-info"]')).animate({
+                        opacity: '0',
 
+                    }).hide();
 
                 } else {
 
@@ -57,7 +60,9 @@ app.directive('header', ['$compile', function ($compile) {
                         opacity: '1',
                         margin: "0px 249px"
                     }, "slow").fadeIn();
-
+                    angular.element(document.querySelector('[id="user-info"]')).animate({
+                        opacity: '1',
+                    }).show();
 
                 }
 
