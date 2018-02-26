@@ -92,12 +92,14 @@ body {
     justify-content: center;
     margin: 6px 65px 0px;
 }
+
 .side-nav .user-info p.name {
     text-align: center;
     margin-bottom: 0;
     font-size: 13px;
     font-weight: 500;
 }
+
 .side-nav .user-info span.online {
     border-radius: 3px;
     background: #58d8a3;
@@ -138,29 +140,26 @@ body {
 
 .side-nav ul li:hover {
     background: rgba(0, 0, 0, 0.5);
-    color:#fff;
+    color: #fff;
     width: 237px;
     left: -35px;
 }
 
-.custom-active{
+.custom-active {
     color: #fff;
     background: rgba(154, 205, 50, 0.5);
-
 }
 
 @media (max-width:550px) {
     a {
         font-size: 0px !important;
     }
-
-     a i {
+    a i {
         font-size: 20px !important;
-     }
-  }
+    }
+}
 
-
-  .slide {
+.slide {
     transition: .3s;
     opacity: 1;
 }
@@ -170,7 +169,8 @@ body {
     opacity: 0;
 }
 
-.slide.ng-enter.ng-enter-active, .slide.ng-leave {
+.slide.ng-enter.ng-enter-active,
+.slide.ng-leave {
     transition: .3s;
     opacity: 1;
 }
@@ -178,4 +178,14 @@ body {
 .slide.ng-leave.ng-leave-active {
     transition: .3s;
     opacity: 0;
+}
+
+.loading-container {
+    opacity: 1;
+    margin-left: 500px;
+    margin-top: 2%;
+}
+
+.loading-container span.loading-text {
+    margin-right: 12px;
 }

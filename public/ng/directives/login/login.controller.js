@@ -1,6 +1,6 @@
 ' use strict';
 var app = angular.module('LIBAPP');
-app.controller('loginCtrl', function ($scope, $window, $state, AuthenticationFactory) {
+app.controller('loginCtrl', function ($scope, $window, $state, AuthenticationFactory,$timeout) {
     $scope.login = function (username, password) {
         console.log(username + "" + password);
         if (username != '' || password != '') {
@@ -14,9 +14,23 @@ app.controller('loginCtrl', function ($scope, $window, $state, AuthenticationFac
                 $window.sessionStorage.user = res.data.username;
                 $window.sessionStorage.userRole = res.data.role;
                 $window.sessionStorage.userplan = res.data.userPlan;
-                $state.go("dashboard.home", {
-                    'message': 'Welcome to Dashboard'
-                });
+
+
+                angular.element(document.querySelector('[id="login-wrapper"]')).animate({
+                    opacity: '0',
+                }).hide();
+                angular.element(document.querySelector('[id="login-loading-bar"]')).animate({
+                    opacity: '1',
+                }).show();
+
+                var goTodashboard = function() {
+                    $state.go("dashboard.home", {
+                        'message': 'Welcome to Dashboard'
+                    });
+                  };
+
+                  $timeout(goTodashboard, 5000);
+
             });
 
         }
