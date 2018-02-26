@@ -1,15 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
     overflow-x: hidden;
-    font-family: "Arial", serif
+
 }
 
 #main-page-wrapper {
     width: 100%;
     max-width: 99%;
-    overflow: hidden;
+
 }
 
 #page-wrapper {
@@ -43,13 +42,13 @@ body {
 } */
 
 .navbar {
-    height: 60px;
+    height: 100%;
     width: 100%;
     background: rgba(0,17,89,0.9);
     box-shadow: 3px 1px 8px #000;
     border-radius: 0;
     position: relative;
-    min-height: 50px;
+    max-height: 65px;
     margin-bottom: 10px;
     border: 1px solid transparent;
 }
@@ -61,14 +60,14 @@ body {
 
 .navbar .navbar-nav-left a {
     text-align: center;
-    padding: 14px 255px;
+    padding: 14px 10px;
     text-decoration: none;
     color: #fff;
 
 }
 
 .navbar .navbar-nav-left ul {
-    padding: 12px 0px 3px 10px;
+    padding: 12px 0px 3px 850px;
     list-style: none;
 }
 .navbar .navbar-nav-left ul li {
@@ -95,31 +94,11 @@ body {
     padding: 10px 10px 10px 30px;
     color: #000;
     display: block;
-    font-size: 13px;
+    font-size: 16px;
     transition: 0.3s;
 }
 
 .side-nav ul {
     padding: 0px 0px 0px 0px;
     list-style: none;
-}
-
-.navbar .navbar-nav-right {
-    float: right;
-}
-
-.navbar .navbar-nav-right a {
-    text-align: center;
-    padding: 0px 5px;
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-}
-.navbar .navbar-nav-right ul {
-    padding: 17px 31px 0 0px;
-    list-style: none;
-}
-
-.navbar .navbar-nav-right ul li {
-    display: inline;
 }

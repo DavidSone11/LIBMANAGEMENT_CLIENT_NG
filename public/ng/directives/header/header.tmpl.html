@@ -2,33 +2,38 @@
     <div class="navbar-nav-left">
         <ul>
             <li>
-                <a href="#" class="toggleButton">
+                <a href="javascript:void(0);" ng-click="enableSidebar()">
                     <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
+            <li>
+                <a href="#">WELCOME : SANTOSH</a>
+                <img class="img-circle" src="assets/images/cory-nh.jpg">
+            </li>
+
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-envelope fa-1x fa-fw"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-bell fa-1x fa-fw"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-flag fa-1x fa-fw"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" ng-click="logout()">
+                    <i class="fa fa-sign-out"></i>
+                </a>
+            </li>
+
         </ul>
     </div>
-    <div class="navbar-nav-right">
-        <ul>
 
-                <li>
-                        <a href="#">WELCOME : SANTOSH</a>
-                    </li>
-
-
-            <li>
-                <a href="#"> <i class="fa fa-envelope fa-1x fa-fw"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-bell fa-1x fa-fw"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-flag fa-1x fa-fw"></i></a>
-            </li>
-            <li>
-                <a ui-sref="#" ng-click="logout()"> <img class="img-circle" src="assets/images/cory-nh.jpg"></a>
-            </li>
-        </ul>
-
-    </div>
 </nav>
