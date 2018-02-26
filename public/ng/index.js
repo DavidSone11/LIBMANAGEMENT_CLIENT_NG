@@ -23,7 +23,8 @@ var app = angular.module('LIBAPP', [
     'base64',
     'angular-loading-bar',
     // 'toastr',
-    'ngAnimate'
+    'ngAnimate',
+    ngResource'
 ]);
 
 

@@ -85,7 +85,9 @@ body {
     padding: 75px 0 0 40px;
     box-shadow: 3px 1px 8px #000;
 }
+.no-side-nav{
 
+}
 .side-nav ul li a {
     text-decoration: none;
     padding: 10px 10px 10px 30px;
