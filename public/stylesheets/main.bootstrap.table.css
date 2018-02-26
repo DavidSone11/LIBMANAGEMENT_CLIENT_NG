@@ -1,0 +1,30 @@
+.custom-table {
+    width: 100%;
+    max-width: 85%;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+td {
+    border-bottom: 1px solid black;
+    border-top: none;
+    outline: none;
+    width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* display: block; */
+}
+.custom-table thead tr:first-child:hover {
+    background-color: transparent;
+}
+.custom-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#fff;
+ }
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+textarea:focus,
+input:focus {
+    outline: none;
+}

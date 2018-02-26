@@ -1,16 +1,5 @@
-var api = {
-    protocol: 'http',
-    server: 'localhost',
-    port: 4000,
-    baseUrl: '/api/v1',
-    loginUrl: '/login',
-    registerUrl: '/register',
-};
 
-
-var apiUrl = api.protocol + '://' + api.server + ':' + api.port + api.baseUrl;
-var apiLoginUrl = api.protocol + '://' + api.server + ':' + api.port + api.loginUrl;
-var apiRegisterUrl = api.protocol + '://' + api.server + ':' + api.port + api.registerUrl;
+/*jshint sub:true*/
 var angular_injector = angular.injector(['ng']);
 var https = angular_injector.get('$http');
 
@@ -33,8 +22,12 @@ app.value('logOutUrl', 'http://localhost:4000/logout');
 app.constant('GLOBALAPI', {
     'loginUrl' : 'http://localhost:4000/login',
     'logOutUrl': 'http://localhost:4000/logout',
+    "getUserApi":"http://localhost:4000/api/v1/user/getUsersByAllParams",
+    "removeUserApi":"http://localhost:4000/api/v1/user/removeUserByUpadte"
 
-})
+});
+
+
 
 app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$httpProvider',
     function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $httpProvider) {
@@ -83,6 +76,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 'ng/directives/sidebar/sidebar.directive.js',
                                 'ng/directives/header/header.directive.js',
                                 'ng/factory/Authentication.factory.js',
+                                'ng/factory/token.factory.js',
                                 'ng/servcies/user.service.js',
 
                             ]
@@ -141,4 +135,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
 
 
     }
-]);
+]).run(function($rootScope) {
+    $rootScope.getGlobalToken = function() {
+        return $window.sessionStorage['token'];
+    };
+});
