@@ -15,16 +15,31 @@ td {
     white-space: nowrap;
     /* display: block; */
 }
+
 .custom-table thead tr:first-child:hover {
     background-color: transparent;
 }
+
 .custom-table tr:hover {
     background-color: rgba(0, 0, 0, 0.5);
-    color:#fff;
- }
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: #FFF}
-textarea:focus,
-input:focus {
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #CCC
+}
+
+tr:nth-child(odd) {
+    background: #FFF
+}
+
+input.search[type="text"] {
     outline: none;
+    border: none;
+    border-bottom: 1px solid greenyellow;
+    color: #000;
+}
+
+input.search[type="text"]::placeholder {
+    color: greenyellow;
 }

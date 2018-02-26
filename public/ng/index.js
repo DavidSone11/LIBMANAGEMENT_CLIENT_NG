@@ -78,6 +78,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 'ng/factory/Authentication.factory.js',
                                 'ng/factory/token.factory.js',
                                 'ng/servcies/user.service.js',
+                                'ng/utility/current.state.prototype.js',
+                                'ng/utility/capitalizeFirstLetter.prototype.js',
 
                             ]
                         });

@@ -1,8 +1,11 @@
 var app = angular.module('LIBAPP');
-app.controller('userCtrl', function ($scope, UserService, GLOBALAPI) {
+app.controller('userCtrl', function ($scope, $state, UserService, GLOBALAPI) {
 
     $scope.userList = [];
 
+
+    $scope.currentstate = $state.current.name.currentState();
+    $scope.currentstate = $scope.currentstate.capitalizeFirstLetter();
 
     $scope.getUsersList = function () {
         UserService.getUsers().then(function success(response) {
