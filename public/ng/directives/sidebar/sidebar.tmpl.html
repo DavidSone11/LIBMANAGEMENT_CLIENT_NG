@@ -1,22 +1,28 @@
+
 <div id="side-menu" class="side-nav">
+        <style>
+                span{
+                    margin-right:15px;
+                }
+            </style>
     <ul>
-        <li>
-            <a ui-sref="dashboard.home"><i class="fa fa-tachometer fa-fw" aria-hidden="true"></i>  Dashboard</a>
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard.home"><span class="fa fa-tachometer fa-fw" aria-hidden="true"></span>  Dashboard</a>
         </li>
-        <li>
-            <a href="#"> <i class="fa fa-user-circle-o" aria-hidden="true"></i> UserPlan</a>
+        <li ui-sref-active="active">
+            <a href="#"> <span class="fa fa-user-circle-o" aria-hidden="true"></span> UserPlan</a>
         </li>
-        <li>
-            <a ui-sref="dashboard.role"> <i class="fa fa-tachometer" aria-hidden="true"></i> Role</a>
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard.role"> <span class="fa fa-tachometer" aria-hidden="true"></span> Role</a>
         </li>
-        <li>
-            <a ui-sref="dashboard.user"><i class="fa fa-tachometer" aria-hidden="true"></i> User</a>
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard.user"><span class="fa fa-tachometer" aria-hidden="true"></span> User</a>
         </li>
-        <li>
-            <a href="#"><i class="fa fa-tachometer" aria-hidden="true"></i> Privilege</a>
+        <li ui-sref-active="active">
+            <a href="#"><span class="fa fa-tachometer" aria-hidden="true"></span> Privilege</a>
         </li>
-        <li>
-            <a href="#"><i class="fa fa-tachometer" aria-hidden="true"></i> Train</a>
+        <li ui-sref-active="active">
+            <a href="#"><span class="fa fa-tachometer" aria-hidden="true"></span> Train</a>
         </li>
     </ul>
 </div>
