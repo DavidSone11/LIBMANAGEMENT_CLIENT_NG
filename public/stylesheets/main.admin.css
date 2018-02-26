@@ -83,7 +83,7 @@ body {
     top: 0;
     left: 0;
     background:transparent;
-    padding: 75px 0 0 40px;
+    /* padding: 75px 0 0 40px; */
     box-shadow: 3px 1px 8px #000;
 }
 .no-side-nav{
@@ -91,14 +91,21 @@ body {
 }
 .side-nav ul li a {
     text-decoration: none;
-    padding: 10px 10px 10px 30px;
     color: #000;
-    display: block;
     font-size: 16px;
     transition: 0.3s;
 }
 
 .side-nav ul {
-    padding: 0px 0px 0px 0px;
+    margin: 0;
     list-style: none;
+}
+
+.side-nav ul li {
+    padding: 10px;
+    position: relative;
+    width: 200px;
+    border-bottom: 1px solid yellowgreen;
+    left: -30px;
+    top: 75px;
 }
