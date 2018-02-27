@@ -181,7 +181,7 @@ body {
 }
 
 .loading-container {
-    opacity: 1;
+    opacity: 0;
     margin-left: 500px;
     margin-top: 2%;
 }
