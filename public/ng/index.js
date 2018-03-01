@@ -81,6 +81,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 'ng/utility/current.state.prototype.js',
                                 'ng/utility/capitalizeFirstLetter.prototype.js',
                                 'ng/components/userPlan.component.js',
+                                'ng/custom-directives/slider.directive.js',
+                                'ng/custom-directives/my-slider.js'
 
                             ]
                         });
