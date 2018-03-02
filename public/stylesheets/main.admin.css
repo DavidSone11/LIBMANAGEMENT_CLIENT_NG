@@ -1,11 +1,9 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
-
     overflow-x: hidden;
 }
 
@@ -23,8 +21,8 @@ body {
 @media(min-width:768px) {
     #page-wrapper {
         position: inherit;
-        margin: 0 0 0 250px;
-        padding: 0 30px;
+        margin: 0 0 0 198px;
+        padding: 0 5px;
         border-left: 1px solid #e7e7e7;
         box-shadow: 2px 2px 4px 3px #000;
     }
@@ -49,13 +47,13 @@ body {
 .navbar {
     height: 100%;
     width: 100%;
-    background: rgba(57, 56, 54,1);
+    background: rgba(57, 56, 54, 1);
     box-shadow: 3px 1px 8px #000;
     border-radius: 0;
     position: relative;
     max-height: 65px;
     margin-bottom: 10px;
-    margin: 0px 249px;
+    margin: 0px 198px;
     border: 1px solid transparent;
 }
 
@@ -80,14 +78,14 @@ body {
 }
 
 .side-nav {
-    width: 245px;
+    width: 195px;
     height: 100%;
     min-height: 900px;
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    background: rgba(57, 56, 54,1);
+    background: rgba(57, 56, 54, 1);
     box-shadow: 3px 1px 8px #30904d;
 }
 
@@ -95,16 +93,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgba(41,41,41,1);
+    background: rgba(41, 41, 41, 1);
     height: 100%;
     max-height: 176px;
 }
 
-.side-nav .user-info .user-info-pics>img{
+.side-nav .user-info .user-info-pics img {
     border-radius: 50%;
-    height: 100px;
-    width:100px;
-    margin: 11px 70px 0;
+    width: 50px;
+    height: 50px;
+    margin: 11px 72px 0;
 }
 
 .side-nav .user-info p.name {
@@ -112,14 +110,16 @@ body {
     margin-bottom: 0;
     font-size: 13px;
     font-weight: 500;
-    color:#fff;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .1em;
 }
 
 .side-nav .user-info span.online {
-    border-radius: 3px;
     background: #58d8a3;
     margin: auto;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .side-nav .user-info span.online:after {
@@ -145,8 +145,8 @@ body {
 .side-nav ul li {
     padding: 10px;
     position: relative;
-    width: 237px;
-    left: -35px;
+    width: 195px;
+    left: 0px;
     top: 5px;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -156,16 +156,16 @@ body {
 .side-nav ul li:hover {
     background: #33b35a;
     color: #fff;
-    width: 237px;
-    left: -35px;
+    width: 196px;
+    left: 0px;
 }
 
 .custom-active {
     background: #33b35a;
 }
+
 .side-nav .custom-active>ul>li>span {
     color: #fff;
-
 }
 
 @media (max-width:550px) {
