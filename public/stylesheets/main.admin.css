@@ -1,6 +1,11 @@
-body {
+
+*{
     margin: 0;
     padding: 0;
+}
+
+body {
+
     overflow-x: hidden;
 }
 
@@ -44,7 +49,7 @@ body {
 .navbar {
     height: 100%;
     width: 100%;
-    background: rgba(0, 17, 89, 0.9);
+    background: rgba(57, 56, 54,1);
     box-shadow: 3px 1px 8px #000;
     border-radius: 0;
     position: relative;
@@ -82,15 +87,24 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background: transparent;
-    box-shadow: 3px 1px 8px #000;
+    background: rgba(57, 56, 54,1);
+    box-shadow: 3px 1px 8px #30904d;
 }
 
 .side-nav .user-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 6px 65px 0px;
+    background: rgba(41,41,41,1);
+    height: 100%;
+    max-height: 176px;
+}
+
+.side-nav .user-info .user-info-pics>img{
+    border-radius: 50%;
+    height: 100px;
+    width:100px;
+    margin: 11px 70px 0;
 }
 
 .side-nav .user-info p.name {
@@ -98,6 +112,7 @@ body {
     margin-bottom: 0;
     font-size: 13px;
     font-weight: 500;
+    color:#fff;
 }
 
 .side-nav .user-info span.online {
@@ -117,7 +132,7 @@ body {
 
 .side-nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-size: 16px;
     transition: 0.3s;
 }
@@ -139,15 +154,18 @@ body {
 }
 
 .side-nav ul li:hover {
-    background: rgba(0, 0, 0, 0.5);
+    background: #33b35a;
     color: #fff;
     width: 237px;
     left: -35px;
 }
 
 .custom-active {
+    background: #33b35a;
+}
+.side-nav .custom-active>ul>li>span {
     color: #fff;
-    background: rgba(154, 205, 50, 0.5);
+
 }
 
 @media (max-width:550px) {

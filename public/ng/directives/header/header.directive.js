@@ -21,8 +21,10 @@ app.directive('header', ['$compile', function ($compile) {
                 if (toggle) {
 
                     angular.element(document.querySelector('[id="side-menu"]')).animate({
-                        left: '0px',
-                        width: '60px',
+                        // left: '0px',
+                        left: '-500px',
+                        // width: '60px',
+                        width: '10px',
                         opacity: '1',
                     }, "slow").fadeIn();
                     angular.element(document.querySelector('[id="page-wrapper"]')).animate({
@@ -41,6 +43,9 @@ app.directive('header', ['$compile', function ($compile) {
                         opacity: '0',
 
                     }).hide();
+
+                    angular.element(document.querySelector('[id="user-info"]')).addClass();
+
 
                 } else {
 
@@ -63,6 +68,7 @@ app.directive('header', ['$compile', function ($compile) {
                     angular.element(document.querySelector('[id="user-info"]')).animate({
                         opacity: '1',
                     }).show();
+
 
                 }
 
